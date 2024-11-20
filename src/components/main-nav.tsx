@@ -6,9 +6,17 @@ import { usePathname } from "next/navigation";
 import { siteConfig } from "~/config/site";
 import { cn } from "~/lib/utils";
 import { Icons } from "./icons";
+import { docsConfig } from "~/config/docs";
+import { useUser } from "@clerk/nextjs";
 
 export function MainNav() {
   const pathname = usePathname();
+  const mainNav = docsConfig.mainNav;
+  const user = useUser();
+
+  if (!user.isLoaded) {
+    return <>Loading...</>;
+  }
 
   return (
     <div className="mr-4 hidden md:flex">
@@ -19,48 +27,26 @@ export function MainNav() {
         </span>
       </Link>
       <nav className="flex items-center gap-4 text-sm lg:gap-6">
-        <Link
-          href="/"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname === "/tracker" ? "text-foreground" : "text-foreground/60",
-          )}
-        >
-          Time Tracking
-        </Link>
-        <Link
-          href="/"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/travel")
-              ? "text-foreground"
-              : "text-foreground/60",
-          )}
-        >
-          Travel
-        </Link>
-        <Link
-          href="/"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/sport")
-              ? "text-foreground"
-              : "text-foreground/60",
-          )}
-        >
-          Sport
-        </Link>
-        <Link
-          href="/"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/blog")
-              ? "text-foreground"
-              : "text-foreground/60",
-          )}
-        >
-          Blog
-        </Link>
+        {mainNav.map((item) =>
+          item.protected && !user.isSignedIn ? null : (
+            <Link
+              key={item.href}
+              href={item.href || "/"}
+              aria-disabled={item.disabled}
+              tabIndex={item.disabled ? -1 : undefined}
+              className={cn(
+                "transition-colors hover:text-foreground/80",
+                pathname === item.href
+                  ? "text-foreground"
+                  : "text-foreground/60",
+                item.disabled &&
+                  "pointer-events-none cursor-not-allowed text-foreground/40",
+              )}
+            >
+              {item.title}
+            </Link>
+          ),
+        )}
       </nav>
     </div>
   );

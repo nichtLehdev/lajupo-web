@@ -14,12 +14,8 @@ import { Icons } from "~/components/icons";
 export default function IndexPage() {
   return (
     <div className="container relative">
-      <div className="flex justify-center">
-        <Icons.logo className="h-96 w-96" />
-      </div>
-
       <PageHeader>
-        <PageHeaderHeading>Construction Ongoing</PageHeaderHeading>
+        <PageHeaderHeading>Photos</PageHeaderHeading>
         <PageHeaderDescription>
           {
             "Hi there! We're currently building this website. Check back soon for updates. While you wait please check out our Instagram page."

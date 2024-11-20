@@ -1,9 +1,10 @@
 export const siteConfig = {
-  name: "lehdev",
-  url: "https://www.lehdev.com",
+  name: "LaJuPo Rheinland",
+  url: "https://www.lajupo.de",
   links: {
+    pwr: "https://posaunenwerk-rheinland.de",
     github: "https://github.com/nichtLehdev",
-    instagram: "https://www.instagram.com/lars_img/",
+    instagram: "https://www.instagram.com/lajupo.rheinland/",
     linkedin: "https://www.linkedin.com/in/lehdev/",
     x: "https://x.com/lehdev",
   },

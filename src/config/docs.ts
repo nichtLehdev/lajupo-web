@@ -9,22 +9,17 @@ export interface DocsConfig {
 export const docsConfig: DocsConfig = {
   mainNav: [
     {
-      title: "Time Tracking",
-      href: "/tracker",
-    },
-    {
-      title: "Träwelling App",
-      href: "/travel",
+      title: "News",
+      href: "/news",
       disabled: true,
     },
     {
-      title: "Sport",
-      href: "/sport",
-      disabled: true,
+      title: "Photos",
+      href: "/photos",
     },
     {
-      title: "Blog",
-      href: "/blog",
+      title: "About us",
+      href: "/about",
       disabled: true,
     },
   ],
