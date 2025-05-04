@@ -63,15 +63,16 @@ export default function IndexPage() {
     // add more horizontal images here
   ];
 
-  // Pick a random image once (memoized to avoid flicker on rerender)
-  const mobileImage = useMemo(() => {
-    const random = Math.floor(Math.random() * verticalImages.length);
-    return verticalImages[random];
-  }, []);
+  const [isHydrated, setIsHydrated] = useState(false);
+  const [desktopImage, setDesktopImage] = useState(horizontalImages[0]);
+  const [mobileImage, setMobileImage] = useState(verticalImages[0]);
 
-  const desktopImage = useMemo(() => {
-    const random = Math.floor(Math.random() * horizontalImages.length);
-    return horizontalImages[random];
+  useEffect(() => {
+    setIsHydrated(true);
+    const randomH = Math.floor(Math.random() * horizontalImages.length);
+    const randomV = Math.floor(Math.random() * verticalImages.length);
+    setDesktopImage(horizontalImages[randomH]);
+    setMobileImage(verticalImages[randomV]);
   }, []);
 
   if (!mobileImage || !desktopImage) {

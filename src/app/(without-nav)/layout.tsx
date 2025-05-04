@@ -2,7 +2,6 @@ import "~/styles/globals.css";
 
 import { type Viewport, type Metadata } from "next";
 import { ThemeProvider } from "~/components/theme-provider";
-import { SiteHeader } from "~/components/site-header";
 import { siteConfig } from "~/config/site";
 import { cn } from "~/lib/utils";
 import { fontSans } from "~/lib/fonts";
