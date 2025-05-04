@@ -11,6 +11,7 @@ export const concertConfig = {
     address: "Großer Markt",
     city: "Wesel",
     zip: "46483",
+    link: "https://www.google.com/maps/dir//Willibrordi-Dom",
   },
   price: {
     normal: 8,
