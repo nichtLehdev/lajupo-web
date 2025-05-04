@@ -77,7 +77,7 @@ export default function IndexPage() {
 
   if (!mobileImage || !desktopImage) {
     return (
-      <div className="flex h-screen w-full items-center justify-center bg-background text-2xl font-bold text-white">
+      <div className="bg-background flex h-screen w-full items-center justify-center text-2xl font-bold text-white">
         <Icons.spinner className="h-10 w-10 animate-spin" />
       </div>
     );
@@ -122,10 +122,10 @@ export default function IndexPage() {
               buttonVariants({
                 variant: "ghost",
               }),
-              "h-8 w-8 px-0",
+              "size-8 px-0",
             )}
           >
-            <Icons.instagram className="h-10 w-10" />
+            <Icons.instagram className="size-10" />
             <span className="sr-only">Instagram</span>
           </div>
         </Link>
@@ -135,7 +135,7 @@ export default function IndexPage() {
       <div className="absolute inset-0 z-10">
         {/* Large screen angled pane */}
         <div className="clip-angled-pane relative hidden h-full w-full items-center bg-black/70 lg:flex">
-          <div className="ml-[60%] mr-8 w-[35%] text-right text-white">
+          <div className="mr-8 ml-[60%] w-[35%] text-right text-white">
             <h1 className="hidden text-6xl font-bold 2xl:block 2xl:text-6xl">
               Landes&shy;jugend&shy;posaunenchor Rheinland
             </h1>
@@ -170,7 +170,7 @@ export default function IndexPage() {
               <div className="flex items-center justify-end gap-2 text-lg">
                 {concertConfig.date} <span className="font-normal">um</span>
                 {concertConfig.time} Uhr{" "}
-                <CalendarClockIcon className="h-6 w-6" />
+                <CalendarClockIcon className="size-6" />
               </div>
             </h3>
             <h3 className="mt-4 text-xl font-semibold">
@@ -180,7 +180,7 @@ export default function IndexPage() {
                   <span className="font-normal">, </span>
                   {concertConfig.location.city}
                 </div>{" "}
-                <MapPinIcon className="h-6 w-6" />
+                <MapPinIcon className="size-6" />
               </div>
             </h3>
             <h3 className="mt-4 text-xl font-semibold">
@@ -191,7 +191,7 @@ export default function IndexPage() {
                   <span className="font-normal">ermäßigt</span>{" "}
                   {concertConfig.price.reduced}€{" "}
                 </div>
-                <TicketIcon className="h-6 w-6" />
+                <TicketIcon className="size-6" />
               </div>
             </h3>
           </div>
@@ -230,7 +230,7 @@ export default function IndexPage() {
                 <div className="flex items-center justify-end gap-2 text-lg">
                   {concertConfig.date} <span className="font-normal">um</span>
                   {concertConfig.time} Uhr{" "}
-                  <CalendarClockIcon className="h-6 w-6" />
+                  <CalendarClockIcon className="size-6" />
                 </div>
               </h3>
               <h3 className="mt-4 text-xl font-semibold">
@@ -240,7 +240,7 @@ export default function IndexPage() {
                     <span className="font-normal">, </span>
                     {concertConfig.location.city}
                   </div>{" "}
-                  <MapPinIcon className="h-6 w-6" />
+                  <MapPinIcon className="size-6" />
                 </div>
               </h3>
               <h3 className="mt-4 text-xl font-semibold">
@@ -251,7 +251,7 @@ export default function IndexPage() {
                     <span className="font-normal">ermäßigt</span>{" "}
                     {concertConfig.price.reduced}€{" "}
                   </div>
-                  <TicketIcon className="h-6 w-6" />
+                  <TicketIcon className="size-6" />
                 </div>
               </h3>
             </div>
