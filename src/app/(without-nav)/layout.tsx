@@ -65,7 +65,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             fontSans.variable,
           )}
         >
-          <ClerkProvider publishableKey="pk_live_Y2xlcmsubGFqdXBvLmRlJA">
+          <ClerkProvider>
             <ThemeProvider
               attribute="class"
               defaultTheme="system"

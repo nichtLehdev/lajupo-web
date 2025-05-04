@@ -115,7 +115,6 @@ export default function IndexPage() {
           </div>
         </div>
 
-        {/* Small screen solid overlay */}
         <div className="flex h-full w-full items-center justify-center bg-black/70 px-8 lg:hidden">
           <div className="text-white">
             <h1 className="text-5xl font-bold">LaJuPo Rheinland</h1>
