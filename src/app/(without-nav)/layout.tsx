@@ -61,11 +61,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <head />
         <body
           className={cn(
-            "min-h-screen bg-background font-sans antialiased",
+            "bg-background min-h-screen font-sans antialiased",
             fontSans.variable,
           )}
         >
-          <ClerkProvider>
+          <ClerkProvider publishableKey="pk_live_Y2xlcmsubGFqdXBvLmRlJA">
             <ThemeProvider
               attribute="class"
               defaultTheme="system"
@@ -73,7 +73,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
               disableTransitionOnChange
             >
               <div vaul-drawer-wrapper="">
-                <div className="relative flex min-h-screen flex-col bg-background">
+                <div className="bg-background relative flex min-h-screen flex-col">
                   <main className="flex-1">{children}</main>
                 </div>
               </div>

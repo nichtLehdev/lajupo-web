@@ -8,9 +8,6 @@ export const env = createEnv({
    */
   server: {
     DATABASE_URL: z.string().url(),
-    ONEDRIVE_TENANT_ID: z.string(),
-    ONEDRIVE_CLIENT_ID: z.string(),
-    ONEDRIVE_CLIENT_SECRET: z.string(),
     CLERK_SECRET_KEY: z.string(),
     NODE_ENV: z
       .enum(["development", "test", "production"])
@@ -32,9 +29,6 @@ export const env = createEnv({
    */
   runtimeEnv: {
     DATABASE_URL: process.env.DATABASE_URL,
-    ONEDRIVE_TENANT_ID: process.env.ONEDRIVE_TENANT_ID,
-    ONEDRIVE_CLIENT_ID: process.env.ONEDRIVE_CLIENT_ID,
-    ONEDRIVE_CLIENT_SECRET: process.env.ONEDRIVE_CLIENT_SECRET,
     CLERK_SECRET_KEY: process.env.CLERK_SECRET_KEY,
     NODE_ENV: process.env.NODE_ENV,
     // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
