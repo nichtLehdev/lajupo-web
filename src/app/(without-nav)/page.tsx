@@ -19,6 +19,7 @@ import { cn } from "~/lib/utils";
 export default function IndexPage() {
   const verticalImages = [
     "/main/vertical/20250406_192355000_iOS.jpg",
+    "/main/vertical/20250501_185500_iOS.jpg",
     // add more vertical images here
   ];
   const horizontalImages = [
