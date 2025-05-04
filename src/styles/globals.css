@@ -61,6 +61,14 @@
   }
 }
 
+.clip-angled-pane {
+  clip-path: polygon(
+    60% 0%,
+    /* Top left of pane */ 100% 0%,
+    /* Top right */ 100% 100%,
+    /* Bottom right */ 52.5% 100% /* Bottom left of pane */
+  );
+}
 @layer base {
   * {
     @apply border-border;
