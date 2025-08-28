@@ -84,17 +84,19 @@ export default function NextEvent() {
           <MapPinIcon className="size-6" />
         </div>
       </h3>
-      <h3 className="mt-4 text-xl font-semibold">
-        <div className="flex items-center justify-end gap-2 text-lg">
-          <div>
-            {concertConfig.price.normal}€{" "}
-            <span className="font-normal">/ </span>
-            <span className="font-normal">ermäßigt</span>{" "}
-            {concertConfig.price.reduced}€{" "}
+      {concertConfig.price && (
+        <h3 className="mt-4 text-xl font-semibold">
+          <div className="flex items-center justify-end gap-2 text-lg">
+            <div>
+              {concertConfig.price?.normal}€{" "}
+              <span className="font-normal">/ </span>
+              <span className="font-normal">ermäßigt</span>{" "}
+              {concertConfig.price?.reduced}€{" "}
+            </div>
+            <TicketIcon className="size-6" />
           </div>
-          <TicketIcon className="size-6" />
-        </div>
-      </h3>
+        </h3>
+      )}
     </div>
   );
 }
