@@ -32,9 +32,9 @@ function SignInButtonComponent() {
       </SignedOut>
       <SignedIn>
         <Button variant="link" className="hover:cursor-pointer" asChild>
-          <Link href="/members" className="flex items-center justify-end gap-2">
+          <Link href="/photos" className="flex items-center justify-end gap-2">
             <User className="size-8" />
-            <span className="hidden text-sm font-bold lg:block">Dashboard</span>
+            <span className="hidden text-sm font-bold lg:block">Photos</span>
           </Link>
         </Button>
       </SignedIn>
