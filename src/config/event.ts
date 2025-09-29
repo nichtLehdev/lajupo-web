@@ -25,7 +25,7 @@ export const concertConfig: Concert = {
   }),
   time: "TBA",
   location: {
-    name: "TBA,
+    name: "TBA",
     address: "",
     city: "Simmern",
     zip: "55469",
