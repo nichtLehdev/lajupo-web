@@ -18,18 +18,18 @@ type Concert = {
 
 export const concertConfig: Concert = {
   title: "TBA",
-  date: new Date("2026-03-22").toLocaleDateString("de-DE", {
+  date: new Date("2026-03-21").toLocaleDateString("de-DE", {
     year: "numeric",
     month: "2-digit",
     day: "2-digit",
   }),
-  time: "TBA",
+  time: "19:00",
   location: {
-    name: "TBA",
-    address: "",
-    city: "Simmern",
-    zip: "55469",
-    link: "",
+    name: "Abteikirche Otterberg",
+    address: "Kirchstraße 10",
+    city: "Otterberg",
+    zip: "67697",
+    link: "https://www.google.com/maps/dir/?api=1&destination=Abteikirche%20Otterberg",
   },
   link: "",
 };
